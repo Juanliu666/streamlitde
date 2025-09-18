@@ -18,9 +18,12 @@ import json
 
 current_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-model_path = os.path.join(os.path.join(current_dir, "在线页面开发"), "attention_lstm_model.h5")  # 创建Flask应用
-scaler_x_path = os.path.join(os.path.join(current_dir, "在线页面开发"), "scaler_X.pkl")  # 创建Flask应用
-scaler_y_path = os.path.join(os.path.join(current_dir, "在线页面开发"), "scaler_y.pkl")  # 创建Flask应用
+model_path = "./attention_lstm_model.h5"  # 创建Flask应用
+# model_path = os.path.join(os.path.join(current_dir, "在线页面开发"), "attention_lstm_model.h5")  # 创建Flask应用
+scaler_x_path = "./scaler_X.pkl"  # 创建Flask应用
+# scaler_x_path = os.path.join(os.path.join(current_dir, "在线页面开发"), "scaler_X.pkl")  # 创建Flask应用
+scaler_y_path = "./scaler_y.pkl"  # 创建Flask应用
+# scaler_y_path = os.path.join(os.path.join(current_dir, "在线页面开发"), "scaler_y.pkl")  # 创建Flask应用
 
 
 # 自定义注意力机制层（与训练时相同）
@@ -93,3 +96,4 @@ def predict(input_values: list):
             'success': False,
             'error': str(e)
         })
+
