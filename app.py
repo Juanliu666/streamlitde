@@ -7,7 +7,7 @@ import streamlit as st
 current_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(current_dir)
 
-from streamlitde.model_api import predict
+from model_api import predict
 # 初始化数据存储
 if 'result' not in st.session_state:
     st.session_state.result = None
@@ -77,3 +77,4 @@ if st.session_state.result:
     # st.write("###  原始结果")
 
     # st.write(st.session_state.result["predictions"])
+
