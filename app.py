@@ -4,7 +4,7 @@ import sys
 import requests
 import streamlit as st
 
-current_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+current_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(current_dir)
 
 from streamlitde.model_api import predict
@@ -75,4 +75,5 @@ if st.session_state.result:
                     unsafe_allow_html=True)
 
     # st.write("###  原始结果")
+
     # st.write(st.session_state.result["predictions"])
